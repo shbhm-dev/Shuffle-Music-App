@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShuffleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="UzY-ZW-XH0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="AmE-Y2-nSt">
+                                <rect key="frame" x="67" y="34" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="jJe-Tl-6Jr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzF-UV-idS">
+                                <rect key="frame" x="67" y="233" width="218" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Qhr-XK-Zrt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SILENCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm4-Yk-RKs">
+                                <rect key="frame" x="67" y="290" width="218" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="487-gm-UUI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="wfT-5J-imk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="gBE-BN-KGK">
+                                <rect key="frame" x="10" y="390" width="355" height="217"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXF-KW-LkF">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="55"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="39"/>
+                                        <state key="normal" title="SHUFFLE">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shuffleTpd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="757-T4-cSW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se9-Al-TQv">
+                                        <rect key="frame" x="0.0" y="81" width="355" height="55"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="39"/>
+                                        <state key="normal" title="PAUSE">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pauseTpd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgQ-wY-yer"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-Xw-oO7">
+                                        <rect key="frame" x="0.0" y="162" width="355" height="55"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="39"/>
+                                        <state key="normal" title="STOP">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Stoptpd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSD-IA-aQI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UzY-ZW-XH0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5FP-Ts-Res"/>
+                            <constraint firstItem="UzY-ZW-XH0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7ug-2Q-J4U"/>
+                            <constraint firstItem="Cm4-Yk-RKs" firstAttribute="top" secondItem="FzF-UV-idS" secondAttribute="bottom" constant="24" id="ESD-ls-hul"/>
+                            <constraint firstItem="UzY-ZW-XH0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Gkv-xF-Sld"/>
+                            <constraint firstItem="gBE-BN-KGK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="H9o-XQ-wzw"/>
+                            <constraint firstItem="AmE-Y2-nSt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="KYZ-O2-WkH"/>
+                            <constraint firstItem="AmE-Y2-nSt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="SzN-ZD-MQf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AmE-Y2-nSt" secondAttribute="trailing" constant="68" id="TMt-rA-gdd"/>
+                            <constraint firstItem="Cm4-Yk-RKs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="TpV-w2-kGL"/>
+                            <constraint firstItem="FzF-UV-idS" firstAttribute="top" secondItem="AmE-Y2-nSt" secondAttribute="bottom" constant="71" id="Vmb-Qr-FeZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FzF-UV-idS" secondAttribute="trailing" constant="90" id="dHJ-rf-BTH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cm4-Yk-RKs" secondAttribute="trailing" constant="90" id="eg9-Zd-PPo"/>
+                            <constraint firstItem="gBE-BN-KGK" firstAttribute="top" secondItem="Cm4-Yk-RKs" secondAttribute="bottom" constant="67" id="qYt-vF-FOl"/>
+                            <constraint firstItem="UzY-ZW-XH0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ubs-px-7uV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBE-BN-KGK" secondAttribute="trailing" constant="10" id="us4-8b-D8W"/>
+                            <constraint firstItem="FzF-UV-idS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="xNo-q6-Vu3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="musicPlaying" destination="Cm4-Yk-RKs" id="HJS-ZI-r2V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="414" height="736"/>
+        <image name="logo" width="330" height="123"/>
+    </resources>
+</document>
